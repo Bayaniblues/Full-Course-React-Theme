@@ -1,6 +1,7 @@
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBContainer, MDBMask, MDBView } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
+import PatioImage from './assets/patio.jpg';
 
 class FullPageIntroWithFixedTransparentNavbar extends React.Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class FullPageIntroWithFixedTransparentNavbar extends React.Component {
           <Router>
             <MDBNavbar color="bg-primary" fixed="top" dark expand="md" scrolling transparent>
               <MDBNavbarBrand href="/">
-                <strong>Navbar</strong>
+                <strong>Full Course Theme</strong>
               </MDBNavbarBrand>
               {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
               <MDBCollapse isOpen={this.state.collapse} navbar>
@@ -44,12 +45,10 @@ class FullPageIntroWithFixedTransparentNavbar extends React.Component {
             </MDBNavbar>
           </Router>
 
-          <MDBView src="https://mdbootstrap.com/img/Photos/Others/img%20(40).jpg">
-            <MDBMask overlay="purple-light" className="flex-center flex-column text-white text-center">
-              <h2>This Navbar is fixed</h2>
-              <h5>It will always stay visible on the top, even when you scroll down</h5>
-              <p>Navbar's background will switch from transparent to solid color while scrolling down</p><br />
-              <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>
+          <MDBView src={PatioImage}>
+            <MDBMask overlay="purple-strong" className="flex-center flex-column text-white text-center">
+              <h1 style={{ fontWeight: 'bold', fontSize: '10rem'}}>Full Course Theme</h1>
+              <h2>A Landing page for Restaurants</h2>
             </MDBMask>
           </MDBView>
         </header>

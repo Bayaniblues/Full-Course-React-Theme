@@ -1,7 +1,17 @@
 import React, { Component } from "react";
 import { MDBCard, MDBCardImage, MDBCardBody, MDBContainer, MDBRow, MDBCol, MDBTabPane, MDBTabContent, MDBNav, MDBNavItem, MDBNavLink } from "mdbreact";
 
+//Menu Items as tables
 import BreakfastTable from "./subTable/BreakfastTable";
+import LunchTable from "./subTable/LunchTable";
+import DinnerTable from  "./subTable/DinnerTable";
+import DrinkTable from "./subTable/DrinkTable";
+
+//Images
+import BreakfastImage from "./assets/restaurant-breakfast.jpg";
+import LunchImage from "./assets/salad.jpg";
+import DinnerImage from "./assets/Pizza.jpg";
+import DrinkImage from "./assets/cocktail.jpg"
 
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -11,8 +21,6 @@ class Pills extends Component {
             default: "1",
         }
     };
-
-    
 
     togglePills = (type, tab, props) => e => {
         e.preventDefault();
@@ -31,12 +39,18 @@ class Pills extends Component {
         let tableItem;
 
             if (this.state.items.default == "1") {
-                tableItem = "https://mdbootstrap.com/img/Photos/Others/images/43.jpg";
+                tableItem = BreakfastImage;
             }
             else if (this.state.items.default == "2") {
-                tableItem = "https://images.pexels.com/photos/207962/pexels-photo-207962.jpeg?cs=srgb&dl=artistic-blossom-bright-207962.jpg&fm=jpg";
+                tableItem = LunchImage;
             }
-            
+            else if (this.state.items.default == "3") {
+                tableItem = DinnerImage;
+            }
+            else if (this.state.items.default == "4") {
+                tableItem = DrinkImage;
+            }
+
         return (
             <Router>
                 <MDBContainer className="mt-4">
@@ -60,7 +74,13 @@ class Pills extends Component {
                                         <MDBNavItem>
                                             <MDBNavLink to="#" active={this.state.items["default"] === "3"} onClick={this.togglePills("default", "3")} >
                                                 Dinner
-                                </MDBNavLink>
+                                        </MDBNavLink>
+                                        </MDBNavItem>
+
+                                        <MDBNavItem>
+                                            <MDBNavLink to="#" active={this.state.items["default"] === "4"} onClick={this.togglePills("default", "4")} >
+                                                                Drinks
+                                            </MDBNavLink>
                                         </MDBNavItem>
                                     </MDBNav>
                                     <MDBTabContent activeItem={this.state.items["default"]}>
@@ -74,7 +94,7 @@ class Pills extends Component {
                                                 consequat eu adipisicing minim anim aliquip cupidatat culpa
                                                 excepteur quis. Occaecat sit eu exercitation irure Lorem
                                                 incididunt nostrud.
-                                    </p>
+                                            </p>
                                             <BreakfastTable />
                                         </MDBTabPane>
                                         <MDBTabPane tabId="2">
@@ -86,7 +106,8 @@ class Pills extends Component {
                                                 minim sit magna Lorem id et dolore velit Lorem amet
                                                 exercitation duis deserunt. Anim id labore elit adipisicing
                                                 ut in id occaecat pariatur ut ullamco ea tempor duis.
-                                    </p>
+                                            </p>
+                                            <LunchTable />
                                         </MDBTabPane>
                                         <MDBTabPane tabId="3">
                                             <p>
@@ -105,8 +126,24 @@ class Pills extends Component {
                                                 sunt ullamco quis quis commodo voluptate. Mollit nulla
                                                 nostrud adipisicing aliqua cupidatat aliqua pariatur mollit
                                                 voluptate voluptate consequat non.
-                                    </p>
+                                            </p>
+                                            <DinnerTable/>
                                         </MDBTabPane>
+                                        <MDBTabPane tabId="4">
+                                            <p>
+                                                Consequat occaecat ullamco amet non eiusmod nostrud dolore
+                                                irure incididunt est duis anim sunt officia. Fugiat velit
+                                                proident aliquip nisi incididunt nostrud exercitation
+                                                proident est nisi. Irure magna elit commodo anim ex veniam
+                                                culpa eiusmod id nostrud sit cupidatat in veniam ad. Eiusmod
+                                                consequat eu adipisicing minim anim aliquip cupidatat culpa
+                                                excepteur quis. Occaecat sit eu exercitation irure Lorem
+                                                incididunt nostrud.
+                                            </p>
+                                            <DrinkTable/>
+
+                                        </MDBTabPane>
+
                                     </MDBTabContent>
                                 </MDBCol>
                             </MDBRow>

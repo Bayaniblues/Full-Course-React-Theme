@@ -15,21 +15,27 @@ const BreakfastTable = props => {
       <MDBTableBody>
         <tr>
           <td>1</td>
-          <td>Sushi</td>
-          <td>lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</td>
-          <td>Cell</td>
+          <td>Waffles</td>
+          <td>Buttermilk waffles, bacon or sasage, eggs and coffee</td>
+          <td>$9.99</td>
         </tr>
         <tr>
           <td>2</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
+          <td>Pancakes</td>
+          <td>Buttermilk Pancakes, bacon or sasage with eggs and coffee</td>
+          <td>$9.99</td>
         </tr>
         <tr>
           <td>3</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
+          <td>Eggs Benedict</td>
+          <td>English muffin, poached eggs, sausage under hollandaise sauce</td>
+          <td>12.99</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Ostentatious Breakfast</td>
+          <td>French bread, sausages, bacon, and tomatos, and a giant ostrich egg</td>
+          <td>$30.99</td>
         </tr>
       </MDBTableBody>
     </MDBTable>

@@ -7,7 +7,7 @@ const JumbotronPage = () => {
       <MDBRow>
         <MDBCol>
           <MDBJumbotron>
-            <h2 className="h1 display-3">Hello, world!</h2>
+            <h2 className="h1 display-3">Food for Thought</h2>
             <p className="lead">
               This is a simple hero unit, a simple Jumbotron-style component for
               calling extra attention to featured content or information.
